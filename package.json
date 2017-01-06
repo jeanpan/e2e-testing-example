@@ -7,11 +7,11 @@
     "build:production": "gulp build --production",
     "postinstall": "npm run build:production && node nightwatch.conf.js",
     "start": "node server.js",
-    "test": "npm run test:client && npm run test:server && ./node_modules/.bin/nightwatch --env local",
+    "test": "npm run test:client && npm run test:server",
     "test:client": "mocha test/client --recursive --compilers js:babel-register",
     "test:server": "mocha test/server --recursive --compilers js:babel-register",
-    "test:e2e": "./node_modules/.bin/nightwatch --env local",
-    "sauce": "./node_modules/.bin/nightwatch -e chrome,ie11,android_s4_emulator,iphone_6_simulator",
+    "test:e2e": "./node_modules/.bin/nightwatch -e local",
+    "sauce": "./node_modules/.bin/nightwatch -e chrome,ie11",
     "watch": "gulp"
   },
   "dependencies": {
