@@ -1,5 +1,5 @@
 module.exports = {
-  'Demo test GitHub': function (browser) {
+  'Demo test GitHub': function(browser) {
     browser
       .url('http://www.github.com/dwyl')   // visit the url
       .waitForElementVisible('body'); // wait for the body to be rendered
@@ -14,5 +14,12 @@ module.exports = {
     browser
       .assert.containsText('body', 'do what you love') // assert contains
       .end();
+  },
+
+  afterEach: function(client, done) {
+    client.customSauceEnd();
+    setTimeout(function() {
+        done();
+    }, 1000);
   }
 };

@@ -8,6 +8,7 @@ const config = {  // we use a nightwatch.conf.js file so we can include comments
     "test/e2e"  // we use '/test' as the name of our test directory by default. So 'test/e2e' for 'e2e'.
   ],
   "output_folder": "./reports",  // reports (test outcome) output by Nightwatch
+  "custom_commands_path" : "custom_commands",
   "selenium": {
     "start_process": true,
     "server_path": BINPATH + "selenium.jar",  // downloaded by selenium-download module (see below)
