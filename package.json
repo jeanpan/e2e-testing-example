@@ -6,7 +6,7 @@
     "build": "gulp build",
     "build:production": "gulp build --production",
     "postinstall": "npm run build:production && node nightwatch.conf.js",
-    "start": "gulp build && node server.js",
+    "start": "npm run build && node server.js",
     "test": "npm run test:client && npm run test:server",
     "deploy": "git push heroku master",
     "sauce": "./node_modules/.bin/nightwatch -e chrome,ie11",
