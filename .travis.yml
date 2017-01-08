@@ -3,15 +3,8 @@ language: node_js
 node_js:
   - "6"
 
-env:
-  - CXX=g++-4.8
-
 addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
+  sauce_connect: true
 
 before_script:
   - npm install
@@ -23,4 +16,5 @@ after_success:
   - npm deploy
 
 notifications:
-  email: false
+  email:
+    - beats.1213@gmail.com
