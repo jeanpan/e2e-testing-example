@@ -1,7 +1,3 @@
-const dotenv = require('dotenv');
-
-dotenv.load();
-
 exports.command = function(result) {
   const SauceLabs = require("saucelabs");
 

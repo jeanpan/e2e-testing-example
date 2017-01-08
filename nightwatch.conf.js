@@ -1,7 +1,4 @@
-const dotenv = require('dotenv');
 const BINPATH = './node_modules/nightwatch/bin/';
-
-dotenv.load();
 
 const config = {  // we use a nightwatch.conf.js file so we can include comments and helper functions
   "src_folders": [
