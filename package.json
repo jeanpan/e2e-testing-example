@@ -6,7 +6,7 @@
     "build": "gulp build",
     "build:production": "gulp build --production",
     "postinstall": "npm run build:production && node nightwatch.conf.js",
-    "start": "node server.js",
+    "start": "gulp build && node server.js",
     "test": "npm run test:client && npm run test:server",
     "test:client": "mocha test/client --recursive --compilers js:babel-register",
     "test:server": "mocha test/server --recursive --compilers js:babel-register",
