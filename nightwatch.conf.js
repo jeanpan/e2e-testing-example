@@ -30,8 +30,8 @@ const config = {  // we use a nightwatch.conf.js file so we can include comments
         "enabled": false,  // save screenshots to this directory (excluded by .gitignore)
         "path": ""
       },
-      "username" : "${SAUCE_USERNAME}",
-      "access_key" : "${SAUCE_ACCESS_KEY}",
+      "username" : "${process.env.SAUCE_USERNAME}",
+      "access_key" : "${process.env.SAUCE_ACCESS_KEY}",
       "globals": {
         "waitForConditionTimeout": 10000  // wait for content on the page before continuing
       }
