@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jeanpan/e2e-testing-example.svg)](https://travis-ci.org/jeanpan/e2e-testing-example)
+
 ## e2e-testing-example
 
 ### License

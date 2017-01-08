@@ -12,8 +12,10 @@ before_script:
 script:
   - npm test
 
-after_success:
-  - npm deploy
+deploy:
+  provider: heroku
+  api_key:
+    secure: "de14a846-1bfa-4720-9f00-599ffa0c8c76"
 
 notifications:
   email:
