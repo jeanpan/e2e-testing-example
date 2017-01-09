@@ -1,5 +1,9 @@
 const BINPATH = './node_modules/nightwatch/bin/';
 
+const SAUCE_USERNAME = process.env.SAUCE_USERNAME;
+const SAUCE_ACCESS_KEY = process.env.SAUCE_ACCESS_KEY;
+const TRAVIS_BUILD_NUMBER = process.env.TRAVIS_BUILD_NUMBER;
+
 const config = {  // we use a nightwatch.conf.js file so we can include comments and helper functions
   "src_folders": [
     "test/e2e"  // we use '/test' as the name of our test directory by default. So 'test/e2e' for 'e2e'.
@@ -29,6 +33,21 @@ const config = {  // we use a nightwatch.conf.js file so we can include comments
       },
       "username" : "${SAUCE_USERNAME}",
       "access_key" : "${SAUCE_ACCESS_KEY}",
+      "desiredCapabilities": {
+        "name": "test-from-travis-${TRAVIS_BUILD_NUMBER}",
+        "build": "build-${TRAVIS_BUILD_NUMBER}",
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "webStorageEnabled": true,
+        "acceptSslCerts": true,
+        "chromeOptions": {
+          "args": [
+            `Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3`,
+            "--window-size=640,1136"  // iphone 5
+          ]
+        }
+      },
       "globals": {
         "waitForConditionTimeout": 10000  // wait for content on the page before continuing
       }

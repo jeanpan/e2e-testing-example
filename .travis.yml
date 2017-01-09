@@ -17,6 +17,9 @@ deploy:
   api_key:
     secure: "69c89889-126a-4602-85c0-bf949e162f78"
 
+after_deploy:
+  - npm run sauce
+
 notifications:
   email:
     - beats.1213@gmail.com

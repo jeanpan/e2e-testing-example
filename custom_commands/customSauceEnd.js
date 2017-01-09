@@ -7,7 +7,7 @@ exports.command = function(result) {
   });
 
   const sessionid = this.capabilities['webdriver.remote.sessionid'];
-  const jobName = this.currentTest.name;
+  const jobName = "[Travis build-" + process.env.TRAVIS_BUILD_NUMBER + "] - " + this.currentTest.module;
 
   saucelabs.updateJob(sessionid, {
     passed: this.currentTest.results.failed === 0,
