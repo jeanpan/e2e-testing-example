@@ -1,8 +1,26 @@
 [![Build Status](https://travis-ci.org/jeanpan/e2e-testing-example.svg)](https://travis-ci.org/jeanpan/e2e-testing-example)
 
-## e2e-testing-example
+# e2e-testing-example
+An e2e-testing example with nightwatch.js + sauce labs + travis ci + heroku.
 
-### License
+## Background
+I want to learn how to do end-to-end testing with [Nightwatch.js](http://nightwatchjs.org/) & [SauceLabs](https://saucelabs.com/), also learn the CI with [Travis-ci](https://travis-ci.org/) & [heroku](https://dashboard.heroku.com/).
+
+## Setup
+- `$npm install`
+
+- copy `sample.env` to `.env` & set all the env variables.
+
+- `$npm start`
+
+### Run Tests
+- unit test : `npm run test`
+
+- e2e test with local browsers (chrome) : `npm run test:e2e`
+
+- e2e test with saucelabs : `npm run sauce`
+
+## License
 The MIT License (MIT)
 
 Copyright (c) 2016 Jean Pan
