@@ -10,8 +10,11 @@ I want to learn how to do end-to-end testing with [Nightwatch.js](http://nightwa
 `$npm install`
 
 copy `sample.env` to `.env` and set all the env variables or set env variables directory
-`$export SAUCE_USERNAME=''`
-`$export SAUCE_ACCESS_KEY=''`
+
+```
+$export SAUCE_USERNAME=''
+$export SAUCE_ACCESS_KEY=''
+```
 
 `$npm start`
 

@@ -1,7 +1,7 @@
 module.exports = {
   beforeEach: function(browser) {
     browser
-      .url('http://127.0.0.1:3000/')
+      .url('https://e2e-testing-example.herokuapp.com/')
       .waitForElementVisible('body')
       .waitForElementVisible('#app > div');
   },
