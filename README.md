@@ -7,18 +7,20 @@ An e2e-testing example with nightwatch.js + sauce labs + travis ci + heroku.
 I want to learn how to do end-to-end testing with [Nightwatch.js](http://nightwatchjs.org/) & [SauceLabs](https://saucelabs.com/), also learn the CI with [Travis-ci](https://travis-ci.org/) & [heroku](https://dashboard.heroku.com/).
 
 ## Setup
-- `$npm install`
+`$npm install`
 
-- copy `sample.env` to `.env` & set all the env variables.
+copy `sample.env` to `.env` and set all the env variables or set env variables directory
+`$export SAUCE_USERNAME=''`
+`$export SAUCE_ACCESS_KEY=''`
 
-- `$npm start`
+`$npm start`
 
 ### Run Tests
-- unit test : `npm run test`
+- unit test : `$npm run test`
 
-- e2e test with local browsers (chrome) : `npm run test:e2e`
+- e2e test with local browsers (chrome) : `$npm run test:e2e`
 
-- e2e test with saucelabs : `npm run sauce`
+- e2e test with saucelabs : `$npm run sauce`
 
 ## License
 The MIT License (MIT)
